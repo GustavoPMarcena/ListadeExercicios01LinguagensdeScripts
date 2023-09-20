@@ -32,3 +32,34 @@ function calcularPotencia(base, expoente){
     document.getElementById("inputBase").value = "";
     document.getElementById("inputExpoente").value = "";
 }
+
+// Questão 3 -------------------------------------------------------
+
+const buttonQ3 = document.getElementById("buttonQ3");
+const divQ3 = document.querySelector("#div-Q3");
+
+buttonQ3.addEventListener("click", ()=> {
+    let gasValue = document.getElementById("inputGasolina").value;
+    let alcoolValue = document.getElementById("inputAlcool").value;
+
+    let textValue = "";
+    
+    if (calcularMelhorCombustivel(alcoolValue, gasValue) == 1){
+        textValue = "álcool";
+    } else {
+        textValue = "gasolina";
+    }
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent = `O melhor combustivel neste caso é ${textValue}`;
+    divQ3.appendChild(paragrafo);
+
+    document.getElementById("inputGasolina").value = "";
+    document.getElementById("inputAlcool").value = "";
+
+});
+
+function calcularMelhorCombustivel(alcool, gasolina){
+    return (gasolina < alcool) ? 0 : 1;
+}
+
+// Questão 3 -------------------------------------------------------
