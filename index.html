@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Linguagens de Script</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="inicio" style="text-align: center;">Lista de exercícios 01 - Funções - Linguagens de Scripts para Web
+        </h1>
+    </header>
+
+    <p style="text-align: center;">Essa atividade compreende a criação de diversos programas em javascript com diversas
+        finalidades, observe a lista de questões:</p>
+
+    <div class="quest">
+        <div>
+            <h2 id="quest6">QUESTÃO 1</h2>
+            <hr>
+            <p> Crie um novo projeto com uma página que tenha 1 botão com o rótulo "Gerar". Para essa questão, crie um
+                ouvinte de evento (addEventListener) no referido botão que realiza uma chamada para uma função
+                gerarNumero()
+                que retorna um número aleatório entre 1 e 100 usando a função Math.random(). Mostre todos os números
+                gerados, para o usuário em elementos li dentro de um ul
+            </p>
+            <button class="botao" type="button" id="buttonQ1">Gerar número aleátorio</button>
+            <ul id="ul-Q1"></ul>
+        </div>
+        <div>
+            <h2 id="quest6">QUESTÃO 2</h2>
+            <hr>
+            <p> Crie um novo projeto com uma página que tenha 2 campos de texto com os seguintes rótulos: base e
+                expoente, e 1 botão com o rótulo "Calcular". Para essa questão, crie um ouvinte de evento no referido
+                botão que busca os valores digitados e realiza uma chamada para uma função calcularPotencia(base,
+                expoente) que você irá implementar usando arrow function e que invoca a função Math.pow() e mostra o
+                número gerado para o usuário em uma div.
+                </p>
+                <input class="inputstilo" type="number" id="inputBase" placeholder="Insira a base">
+                <input class="inputstilo" type="number" id="inputExpoente" placeholder="Insira o expoente">
+                <button class="botao" type="button" id="buttonQ2">Calcular a potenciação</button>
+                <div id="div-Q1"></div>
+            </div>
+            <div>
+                <h2 id="quest6">QUESTÃO 4</h2>
+                <hr>
+                <p>Digite uma temperatura em celsius para ve-la em kelvin e fareheight </p>
+                <input class="inputstilo" type="number" id="inputtemperatura" placeholder="ex: 32">
+                <button class="botao" type="button" onclick="questao6()">Calcular</button>
+                <p id='resposta11'></p>
+                <p id='resposta12'></p>
+            </div>
+
+        </div>
+
+        <footer>
+            <a style="text-decoration: none; color: white;" href="#inicio">
+                <p>Voltar ao inicio</p>
+            </a>
+            <br><br>
+            <p>Gustavo P Marcena@</p>
+        </footer>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin:0;
+    
+  }
+  
+  footer{
+    margin-top: 5%;
+    padding: 1%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  
+  }
+  
+  
+  .quest{
+    margin-left: 10%;
+    margin-right:10%;
+    border-radius: 10px;
+    padding: 1%;
+    border: 1px solid black;
+  }
+  
+  .botao{
+    border: 1px solid black;
+    border-radius:5px;
+    width:20%;
+    margin-left: 40%;
+    align-items: center;
+  }
+  
+  .inputstilo{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    margin-left:25%;
+    width: 50%;
+  }
+  
+  h1{
+    font-style: normal;
+    font-family: 'Acme', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 2%;
+    margin-top:0;
+  
+  }
+  
+  h2{
+    font-family: 'Arial', sans-serif;
+  }
+  
+  p{
+    font-family: 'calibri', sans-serif;
+    font-size: 20px;
+  }
