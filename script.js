@@ -51,6 +51,7 @@ function calcularPotencia(base, expoente) {
 // gasolina e do álcool e um botão para realizar o cálculo e informar ao usuário qual o melhor combustível
 // para abastecer no momento, crie uma função chamada calcularMelhorCombustivel que recebe os dois valores
 // e retorna 0 para gasolina e 1 para álcool.
+
 const buttonQ3 = document.getElementById("buttonQ3");
 const divQ3 = document.querySelector("#div-Q3");
 
@@ -59,14 +60,20 @@ buttonQ3.addEventListener("click", () => {
     let alcoolValue = document.getElementById("inputAlcool").value;
 
     let textValue = "";
-
-    if (calcularMelhorCombustivel(alcoolValue, gasValue) == 1) {
-        textValue = "álcool";
-    } else {
-        textValue = "gasolina";
-    }
     const paragrafo = document.createElement("p");
-    paragrafo.textContent = `O melhor combustivel neste caso é ${textValue}`;
+    let compVal = calcularMelhorCombustivel(alcoolValue, gasValue);
+
+    if(compVal == 2){
+        paragrafo.textContent = `Os dois combustiveis possuem o mesmo preço`;
+    } else{
+        if (calcularMelhorCombustivel(alcoolValue, gasValue) == 1) textValue = "álcool";
+        else if(calcularMelhorCombustivel(alcoolValue, gasValue) == 0) textValue = "gasolina";
+        paragrafo.textContent = `O melhor combustivel neste caso é ${textValue}`;
+    }
+    
+
+    
+    
     divQ3.appendChild(paragrafo);
 
     document.getElementById("inputGasolina").value = "";
@@ -75,7 +82,11 @@ buttonQ3.addEventListener("click", () => {
 });
 
 function calcularMelhorCombustivel(alcool, gasolina) {
-    return (gasolina < alcool) ? 0 : 1;
+    if(alcool < gasolina){
+        return 1;
+    } else if(gasolina < alcool){
+        return 0;
+    } else return 2;
 }
 
 // Questão 4 -------------------------------------------------------
