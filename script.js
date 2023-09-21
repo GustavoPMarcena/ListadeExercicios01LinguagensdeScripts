@@ -63,17 +63,14 @@ buttonQ3.addEventListener("click", () => {
     const paragrafo = document.createElement("p");
     let compVal = calcularMelhorCombustivel(alcoolValue, gasValue);
 
-    if(compVal == 2){
+    if (compVal == 2) {
         paragrafo.textContent = `Os dois combustiveis possuem o mesmo preço`;
-    } else{
+    } else {
         if (calcularMelhorCombustivel(alcoolValue, gasValue) == 1) textValue = "álcool";
-        else if(calcularMelhorCombustivel(alcoolValue, gasValue) == 0) textValue = "gasolina";
+        else if (calcularMelhorCombustivel(alcoolValue, gasValue) == 0) textValue = "gasolina";
         paragrafo.textContent = `O melhor combustivel neste caso é ${textValue}`;
     }
-    
 
-    
-    
     divQ3.appendChild(paragrafo);
 
     document.getElementById("inputGasolina").value = "";
@@ -82,16 +79,22 @@ buttonQ3.addEventListener("click", () => {
 });
 
 function calcularMelhorCombustivel(alcool, gasolina) {
-    if(alcool < gasolina){
+    if (alcool < gasolina) {
         return 1;
-    } else if(gasolina < alcool){
+    } else if (gasolina < alcool) {
         return 0;
     } else return 2;
 }
 
 // Questão 4 -------------------------------------------------------
 
-let inputElement = document.getElementById("inputTempCelcius");
+// Crie um projeto com uma página contendo um campo de texto onde o usuário vai digitar uma temperatura em escala Celsius.O que deve ser feito:
+// Crie duas funções, uma para converter a temperatura para Fahrenheit(converterFahrenheit) e outra para converter para Kelvin(converterKelvin).
+// Crie um ouvinte de evento 'keyup' no campo de texto para atualizar os elementos do tipo span #temp - fahrenheit e #temp - kelvin com as temperaturas nas respectivas escalas à medida que o usuário digita um valor numérico.
+// Caso o usuário não tenha digitado nada ou o valor seja inválido, o valor das temperaturas após a conversão deve ser um “-”, logo abaixo deve existir uma mensagem pedindo para o usuário digitar um valor.
+
+
+let inputElement = document.getElementById("inputTempCelsius");
 
 let spanFahrenheit = document.getElementById("temp-fahrenheit");
 let spanKelvin = document.getElementById("temp-kelvin");
@@ -113,11 +116,11 @@ inputElement.addEventListener('keyup', () => {
     }
 });
 
-function celciusParaFahrenheit(temp){
-    return (temp * (9/5)) + 32;
+function celciusParaFahrenheit(temp) {
+    return (temp * (9 / 5)) + 32;
 }
 
-function celciusParaKelvin(temp){
+function celciusParaKelvin(temp) {
     return temp + 273.15;
 }
 
